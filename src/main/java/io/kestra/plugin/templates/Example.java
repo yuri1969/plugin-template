@@ -4,7 +4,6 @@ import io.kestra.core.models.annotations.Plugin;
 import io.kestra.core.models.property.Property;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.apache.commons.lang3.StringUtils;
@@ -35,7 +34,6 @@ public class Example extends Task implements RunnableTask<Example.Output> {
         title = "Short description for this input",
         description = "Full description of this input"
     )
-    @NotNull
     // required and not blank
     private Property<@NotBlank String> format;
 
